@@ -222,7 +222,7 @@ const (
 const BlockMax = 32
 
 // Byte_Data
-type SMBusData [BlockMax + 2]byte
+type SMBusData [BlockMax]byte
 
 func (b *Bus) Do(rw RW, command uint8, size SMBusSize, data *SMBusData) (err error) {
 	err = b.ReadWrite(rw, command, size, data)
