@@ -219,7 +219,8 @@ const (
 	Read
 )
 
-const BlockMax = 32
+const SMBusMax = 32
+const BlockMax = SMBusMax + 2
 
 // Byte_Data
 type SMBusData [BlockMax]byte
